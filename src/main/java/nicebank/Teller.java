@@ -1,5 +1,5 @@
 package nicebank;
 
-public interface ITeller {
+public interface Teller {
     void withdrawFrom(Account account, int amount);
 }

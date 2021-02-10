@@ -1,6 +1,6 @@
 package nicebank;
 
-public class AutomatedTeller implements ITeller {
+public class AutomatedTeller implements Teller {
     private CashSlot cashSlot;
 
     public AutomatedTeller(CashSlot cashSlot) {

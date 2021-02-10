@@ -5,7 +5,6 @@ package step_definitions;
 import io.cucumber.java.en.Then;
 import nicebank.CashSlot;
 import org.junit.Assert;
-import support.KnowsTheCashSlot;
 
 public class CashSlotSteps {
 

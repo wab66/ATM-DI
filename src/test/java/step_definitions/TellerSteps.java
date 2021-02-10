@@ -1,23 +1,23 @@
 package step_definitions;
 
 import io.cucumber.java.en.When;
-import support.KnowsTheTeller;
+import nicebank.Teller;
 import support.KnowsTheAccount;
+import support.AtmUserInterface;
 
 public class TellerSteps {
 
-    double del = 0;
-    KnowsTheTeller tellerHelper;
     KnowsTheAccount accountHelper;
+    Teller teller;
 
-    public TellerSteps(KnowsTheTeller tellerHelper, KnowsTheAccount accountHelper) {
-        this.tellerHelper = tellerHelper;
+    public TellerSteps(AtmUserInterface teller, KnowsTheAccount accountHelper) {
+        this.teller = teller;
         this.accountHelper = accountHelper;
     }
 
     @When("^I withdraw (\\d+)$")
     public void iWithdraw(int withdrawAmount){
-        tellerHelper.getTeller().withdrawFrom(accountHelper.getMyAccount(), withdrawAmount);
+        teller.withdrawFrom(accountHelper.getMyAccount(), withdrawAmount);
     }
 
 }
